@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bbmmuk0svxqx1"]
+
+[ext_resource type="Script" uid="uid://ivd5h4b31d77" path="res://health_meter.gd" id="1_t37kf"]
+[ext_resource type="Texture2D" uid="uid://vjid48cgy7fl" path="res://heart.png" id="1_yccp2"]
+
+[node name="HealthMeter" type="Node2D" unique_id=628236100]
+script = ExtResource("1_t37kf")
+
+[node name="heart1" type="Sprite2D" parent="." unique_id=1577404858]
+scale = Vector2(0.16924763, 0.16924763)
+texture = ExtResource("1_yccp2")
+
+[node name="heart2" type="Sprite2D" parent="." unique_id=152601562]
+position = Vector2(83, 0)
+scale = Vector2(0.16924763, 0.16924763)
+texture = ExtResource("1_yccp2")
+
+[node name="heart3" type="Sprite2D" parent="." unique_id=1512832707]
+position = Vector2(169, 0)
+scale = Vector2(0.16924763, 0.16924763)
+texture = ExtResource("1_yccp2")

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dqdhu2coafsjo"]
+
+[ext_resource type="Script" uid="uid://dqxmmrwtoeoiv" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://qbaj3di2rpca" path="res://material_pl_chibi_kiritan.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xfd7"]
+size = Vector2(28, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_os57d"]
+size = Vector2(90, 123)
+
+[node name="Player" type="Node2D" unique_id=1919787785]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=535262852]
+scale = Vector2(0.17533326, 0.17533326)
+texture = ExtResource("2_onrkg")
+region_enabled = true
+region_rect = Rect2(0, 0, 750, 750)
+
+[node name="DamageHitbox" type="Area2D" parent="." unique_id=1236072024]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageHitbox" unique_id=468020109]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_0xfd7")
+
+[node name="ParryHitbox" type="Area2D" parent="." unique_id=2011348712 groups=["parryable"]]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParryHitbox" unique_id=124066583]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_os57d")
+
+[connection signal="area_entered" from="DamageHitbox" to="." method="_on_area_2d_area_entered"]

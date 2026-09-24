@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://h8ygnfbln7ck"]
+
+[ext_resource type="Script" uid="uid://cdvy572uepwrj" path="res://bullet.gd" id="1_v7oki"]
+[ext_resource type="Texture2D" uid="uid://cvk37lrce86ox" path="res://ninja_kunai.png" id="2_v8qja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xfd7"]
+size = Vector2(25, 121)
+
+[node name="Bullet" type="Node2D" unique_id=1065624944]
+script = ExtResource("1_v7oki")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1096546465]
+position = Vector2(-1.9073486e-06, 1.0000038)
+rotation = 0.79271877
+scale = Vector2(0.24000005, 0.24131873)
+texture = ExtResource("2_v8qja")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1846850368 groups=["player_attack"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1100171875]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_0xfd7")

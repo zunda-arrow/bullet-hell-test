@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://g5lx83iv7x05"]
+
+[ext_resource type="Texture2D" uid="uid://ca72p4hdeowxl" path="res://card_offence.png" id="1_21rx5"]
+[ext_resource type="Texture2D" uid="uid://1ht5fb6rvfy4" path="res://card_other.png" id="1_dd2wi"]
+[ext_resource type="Texture2D" uid="uid://b0b34x4uu20uc" path="res://card_defence.png" id="1_hael8"]
+[ext_resource type="Script" uid="uid://b0vynld313kvu" path="res://card.gd" id="1_wi8ie"]
+[ext_resource type="Texture2D" uid="uid://qbaj3di2rpca" path="res://material_pl_chibi_kiritan.png" id="4_3ujke"]
+
+[node name="Card" type="Node2D" unique_id=2140376821]
+script = ExtResource("1_wi8ie")
+
+[node name="offence" type="Sprite2D" parent="." unique_id=2066198608]
+unique_name_in_owner = true
+texture = ExtResource("1_21rx5")
+
+[node name="defence" type="Sprite2D" parent="." unique_id=43624752]
+unique_name_in_owner = true
+texture = ExtResource("1_hael8")
+
+[node name="other" type="Sprite2D" parent="." unique_id=768094250]
+unique_name_in_owner = true
+texture = ExtResource("1_dd2wi")
+
+[node name="Picture" type="Sprite2D" parent="." unique_id=1709735149]
+position = Vector2(-1, -35)
+scale = Vector2(0.11999953, 0.11999953)
+texture = ExtResource("4_3ujke")
+region_enabled = true
+region_rect = Rect2(0, 0, 750, 750)
+
+[node name="Name" type="Label" parent="." unique_id=1980139770]
+unique_name_in_owner = true
+offset_left = -19.0
+offset_top = -116.0
+offset_right = 28.0
+offset_bottom = -93.0
+text = "Name"
+
+[node name="Description" type="Label" parent="." unique_id=1654656765]
+unique_name_in_owner = true
+offset_left = -83.0
+offset_top = 34.0
+offset_right = 86.0
+offset_bottom = 57.0
+text = "Description goes here"
+autowrap_mode = 2
+
+[node name="Energy" type="Label" parent="." unique_id=940795722]
+unique_name_in_owner = true
+offset_left = -80.0
+offset_top = -121.0
+offset_right = -40.0
+offset_bottom = -98.0
+text = "1"

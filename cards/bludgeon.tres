@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://baxolfgdlmek6"]
+
+[ext_resource type="Script" uid="uid://iwuivih35hs4" path="res://card_resource.gd" id="1_07tlk"]
+
+[resource]
+script = ExtResource("1_07tlk")
+name = "Bludgeon"
+energy = 5
+description = "At the end of the enemy's next attack, they take 100 damage."
+metadata/_custom_type_script = "uid://iwuivih35hs4"

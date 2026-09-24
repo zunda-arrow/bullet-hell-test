@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://lkg5oxr8exsr"]
+
+[ext_resource type="Script" uid="uid://iwuivih35hs4" path="res://card_resource.gd" id="1_tp0o5"]
+
+[resource]
+script = ExtResource("1_tp0o5")
+type = 1
+name = "Autoshields"
+description = "Gain 1 HP"
+metadata/_custom_type_script = "uid://iwuivih35hs4"

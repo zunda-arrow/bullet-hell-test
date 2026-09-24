@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://v5ulwvxcnnsr"]
+
+[ext_resource type="PackedScene" uid="uid://butefe46036uc" path="res://enemy_attacks/enemy_bullet.tscn" id="1_j55aj"]
+[ext_resource type="PackedScene" uid="uid://b3y7hmjtau6da" path="res://enemy_attacks/enemy_bullet_can_parry.tscn" id="2_v5m1a"]
+
+[node name="AttackPattern1" type="Node2D" unique_id=1297718985]
+
+[node name="EnemyBullet" parent="." unique_id=694147919 instance=ExtResource("1_j55aj")]
+
+[node name="EnemyBullet2" parent="." unique_id=527332622 instance=ExtResource("1_j55aj")]
+position = Vector2(384, -134)
+
+[node name="EnemyBullet4" parent="." unique_id=1967727746 instance=ExtResource("1_j55aj")]
+position = Vector2(-604, -535)
+
+[node name="EnemyBullet5" parent="." unique_id=632116478 instance=ExtResource("1_j55aj")]
+position = Vector2(676, -558)
+
+[node name="EnemyBullet6" parent="." unique_id=689985388 instance=ExtResource("1_j55aj")]
+position = Vector2(-148, -881)
+
+[node name="EnemyBullet7" parent="." unique_id=235078224 instance=ExtResource("1_j55aj")]
+position = Vector2(183, -881)
+
+[node name="EnemyBullet3" parent="." unique_id=793732874 instance=ExtResource("2_v5m1a")]
+position = Vector2(-339, -107)

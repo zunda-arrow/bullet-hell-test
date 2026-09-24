@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b3y7hmjtau6da"]
+
+[ext_resource type="Script" uid="uid://bvmxn01a2641e" path="res://enemy_attacks/enemy_bullet.gd" id="1_xhk0y"]
+[ext_resource type="Texture2D" uid="uid://cvk37lrce86ox" path="res://ninja_kunai.png" id="2_r0o6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xfd7"]
+size = Vector2(38, 140)
+
+[node name="EnemyBullet" type="Area2D" unique_id=793732874 groups=["enemy_attack", "parryable"]]
+script = ExtResource("1_xhk0y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=836648223]
+modulate = Color(0.83583516, 0.00055331114, 0.8361804, 1)
+position = Vector2(0, 12)
+rotation = -2.3479142
+scale = Vector2(0.4927745, 0.4927745)
+texture = ExtResource("2_r0o6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2028411962]
+position = Vector2(3, 65)
+shape = SubResource("RectangleShape2D_0xfd7")

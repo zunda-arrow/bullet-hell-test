@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://belu7vq7aue2t"]
+
+[ext_resource type="PackedScene" uid="uid://dqdhu2coafsjo" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://sjjygi6ju70f" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://bwauyf22mfqme" path="res://dragon_enemy.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://daaj468keg7hi" path="res://EnergyMeter.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://br33pnr0fr1as" path="res://CardPicker.tscn" id="5_7jktm"]
+[ext_resource type="PackedScene" uid="uid://bbmmuk0svxqx1" path="res://HealthMeter.tscn" id="6_ryrav"]
+
+[node name="Game" type="Node2D" unique_id=1574050947]
+script = ExtResource("1_e2o6t")
+
+[node name="Attacks" type="Node2D" parent="." unique_id=639591959]
+unique_name_in_owner = true
+
+[node name="Player" parent="." unique_id=1919787785 instance=ExtResource("1_80nbo")]
+unique_name_in_owner = true
+position = Vector2(972, 923)
+
+[node name="DragonEnemy" parent="." unique_id=333645781 instance=ExtResource("3_feb5d")]
+unique_name_in_owner = true
+position = Vector2(942, 137)
+
+[node name="EnergyMeter" parent="." unique_id=2134196323 instance=ExtResource("4_fc0e3")]
+unique_name_in_owner = true
+position = Vector2(35, 1003)
+
+[node name="CardPicker" parent="." unique_id=1853433595 instance=ExtResource("5_7jktm")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(968, 587)
+
+[node name="HealthMeter" parent="." unique_id=628236100 instance=ExtResource("6_ryrav")]
+unique_name_in_owner = true
+position = Vector2(49, 928)
+
+[node name="EnemyHP" type="Label" parent="." unique_id=1219011884]
+unique_name_in_owner = true
+offset_left = 104.0
+offset_top = 95.0
+offset_right = 215.0
+offset_bottom = 118.0
+theme_override_font_sizes/font_size = 50
+text = "EnemyHP: 100"
+
+[connection signal="create_bullet" from="Player" to="." method="_on_player_create_bullet"]
+[connection signal="hit" from="Player" to="." method="_on_player_hit"]
+[connection signal="parry_landed" from="Player" to="." method="_on_player_parry_landed"]
+[connection signal="create_attack" from="DragonEnemy" to="." method="_on_dragon_enemy_create_attack"]
+[connection signal="hit" from="DragonEnemy" to="." method="_on_dragon_enemy_hit"]
+[connection signal="selection_picked" from="CardPicker" to="." method="_on_card_picker_selection_picked"]

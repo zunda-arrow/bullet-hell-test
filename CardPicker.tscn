@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://br33pnr0fr1as"]
+
+[ext_resource type="Script" uid="uid://bcc3qf5hhky4p" path="res://card_player.gd" id="1_e6rym"]
+[ext_resource type="PackedScene" uid="uid://g5lx83iv7x05" path="res://Card.tscn" id="2_o5np3"]
+
+[node name="CardPicker" type="Node2D" unique_id=1853433595]
+script = ExtResource("1_e6rym")
+
+[node name="Card1" parent="." unique_id=2140376821 instance=ExtResource("2_o5np3")]
+unique_name_in_owner = true
+position = Vector2(-229, -1)
+
+[node name="Card2" parent="." unique_id=2126364578 instance=ExtResource("2_o5np3")]
+unique_name_in_owner = true
+
+[node name="Card3" parent="." unique_id=347141072 instance=ExtResource("2_o5np3")]
+unique_name_in_owner = true
+position = Vector2(238, 0)
+
+[node name="Label" type="Label" parent="." unique_id=1942425323]
+offset_left = -248.0
+offset_top = 133.0
+offset_right = -208.0
+offset_bottom = 178.0
+theme_override_font_sizes/font_size = 32
+text = "Z"
+
+[node name="Label2" type="Label" parent="." unique_id=1576531031]
+offset_left = -12.0
+offset_top = 133.0
+offset_right = 28.0
+offset_bottom = 178.0
+theme_override_font_sizes/font_size = 32
+text = "X"
+
+[node name="Label3" type="Label" parent="." unique_id=709743022]
+offset_left = 225.0
+offset_top = 133.0
+offset_right = 265.0
+offset_bottom = 178.0
+theme_override_font_sizes/font_size = 32
+text = "C"

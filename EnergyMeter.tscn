@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://daaj468keg7hi"]
+
+[ext_resource type="Script" uid="uid://df4mcn8mhxyni" path="res://energy_meter.gd" id="1_mtw37"]
+[ext_resource type="Texture2D" uid="uid://djwn1htfsae3h" path="res://plasma.png" id="2_q855l"]
+
+[node name="EnergyMeter" type="Node2D" unique_id=2134196323]
+script = ExtResource("1_mtw37")
+
+[node name="e1" type="Sprite2D" parent="." unique_id=2133203854]
+texture = ExtResource("2_q855l")
+
+[node name="e2" type="Sprite2D" parent="." unique_id=1399731334]
+position = Vector2(57, 0)
+texture = ExtResource("2_q855l")
+
+[node name="e3" type="Sprite2D" parent="." unique_id=1998262140]
+position = Vector2(113, 0)
+texture = ExtResource("2_q855l")
+
+[node name="e4" type="Sprite2D" parent="." unique_id=1495311916]
+position = Vector2(168, 0)
+texture = ExtResource("2_q855l")
+
+[node name="e5" type="Sprite2D" parent="." unique_id=1846137150]
+position = Vector2(224, 0)
+texture = ExtResource("2_q855l")
